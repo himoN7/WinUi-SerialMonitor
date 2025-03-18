@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page
+    x:Class="winui_serialmonitor.Views.SettingsPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:winui_serialmonitor.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="Transparent">
+
+    <Grid Padding="20">
+        <ScrollView VerticalScrollBarVisibility="Visible">
+
+            <StackPanel Spacing="20" HorizontalAlignment="Stretch">
+                <TextBlock Text="Window Appearance Settings" 
+                       Style="{StaticResource SubtitleTextBlockStyle}"
+                       Margin="0,0,0,0"/>
+
+                <ComboBox x:Name="BackdropStyleComboBox" 
+                      Header="Window Backdrop Style"
+                      SelectionChanged="BackdropStyleComboBox_SelectionChanged">
+                    <ComboBoxItem Content="None"/>
+                    <ComboBoxItem Content="Acrylic"/>
+                    <ComboBoxItem Content="Mica"/>
+                    <ComboBoxItem Content="Mica Alt"/>
+                </ComboBox>
+
+                <Expander Header="About" HorizontalAlignment="Stretch" Background="{StaticResource DesktopAcrylicTransparentBrush}" >
+
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Spacing="20">
+
+
+                        <!-- Application Info Card -->
+                        <Border
+                            HorizontalAlignment="Stretch"
+                            Width="300"
+        Background="{ThemeResource CardBackgroundFillColorDefault}"
+        BorderThickness="1"
+        CornerRadius="8"
+        Padding="20"
+        BorderBrush="{ThemeResource CardStrokeColorDefault}"
+        Margin="10">
+                            <StackPanel Spacing="10">
+                                <!-- App Logo -->
+                                <Image
+                Source="/Assets/serialplot.png"
+                Height="128"
+                Width="128"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Top" />
+
+                                <!-- App Name -->
+                                <TextBlock
+                Text="SyncCOM Serial Port Monitor App"
+                Style="{StaticResource SubtitleTextBlockStyle}"
+                HorizontalAlignment="Center" />
+
+                                <!-- App Description -->
+                                <TextBlock
+                Text="An efficient and user-friendly app for monitoring and managing serial ports."
+                
+                TextWrapping="Wrap"
+                HorizontalAlignment="Center"
+                />
+
+                                <!-- Developer Name -->
+                                <TextBlock
+                Text="Developed by HimoN7"
+                FontSize="14"
+                Opacity="0.7"
+                HorizontalAlignment="Center" />
+
+                                <!-- GitHub and Additional Links -->
+                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Spacing="10">
+                                    <HyperlinkButton
+                    Content="GitHub Repository"
+                    NavigateUri="https://github.com/himon7"
+                    HorizontalAlignment="Center" />
+                                    <HyperlinkButton
+                    Content="Learn More"
+                    NavigateUri="https://yourwebsite.com"
+                    HorizontalAlignment="Center" />
+                                </StackPanel>
+                            </StackPanel>
+                        </Border>
+                        <!-- Developer Info Card -->
+                        <Border
+                            Width="300"
+        Background="{ThemeResource CardBackgroundFillColorDefault}"
+        BorderThickness="1"
+        CornerRadius="8"
+        Padding="16"
+        BorderBrush="{ThemeResource CardStrokeColorDefault}"
+        Margin="20">
+                            <StackPanel Spacing="10">
+                                <!-- Persona Photo -->
+                                <PersonPicture
+                ProfilePicture="https://avatars.githubusercontent.com/u/187613880?v=4"
+                Height="128"
+                Width="128"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Top"/>
+
+                                <!-- Developer Name -->
+                                <TextBlock
+                Text="Hamed Rezaei Adaryani"
+                Style="{StaticResource SubtitleTextBlockStyle}"
+                HorizontalAlignment="Center" />
+
+                                <!-- Additional Information -->
+                                <TextBlock
+                Text="MSc. Graduate in Textile Engineering"
+                
+                HorizontalAlignment="Center" />
+                                <TextBlock
+                Text="Isfahan University of Technology"
+                
+                HorizontalAlignment="Center" />
+
+                                <!-- Contact Links -->
+                                <StackPanel Orientation="Vertical" HorizontalAlignment="Center" Spacing="5">
+                                    <HyperlinkButton
+                    Content="Email: h.rezaei@alumni.iut.ac.ir"
+                    NavigateUri="mailto:h.rezaei@alumni.iut.ac.ir"
+                    HorizontalAlignment="Center" />
+                                   
+                                    <HyperlinkButton
+                    Content="LinkedIn: hamedrezaeia"
+                    NavigateUri="https://ir.linkedin.com/in/hamedrezaeia"
+                    HorizontalAlignment="Center" />
+                                    <HyperlinkButton
+                    Content="ORCID: 0000-0003-1051-3080"
+                    NavigateUri="https://orcid.org/0000-0003-1051-3080"
+                    HorizontalAlignment="Center" />
+                                    <HyperlinkButton
+                    Content="Portfolio: Personal Website"
+                    NavigateUri="https://sites.google.com/view/hamedrezaei/home"
+                    HorizontalAlignment="Center" />
+                                </StackPanel>
+                            </StackPanel>
+                        </Border>
+
+                    </StackPanel>
+
+                </Expander>
+            </StackPanel>
+        </ScrollView>
+    </Grid>
+
+</Page>

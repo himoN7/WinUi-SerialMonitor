@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "winui-serialmonitor (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "winui-serialmonitor (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}
